@@ -1,0 +1,14 @@
+@import "@fontsource-variable/inter";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Custom Base Styles */
+@import "./base.css";
+
+/* Custom Components */
+@import "./components.css";
+
+/* Custom Utilities */
+@import "./utilities.css";

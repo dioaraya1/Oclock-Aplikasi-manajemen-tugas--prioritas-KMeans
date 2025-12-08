@@ -1,0 +1,25 @@
+# Komentar dimulai dengan #
+
+# Abaikan semua file .log
+*.log
+
+# Tapi jangan abaikan error.log
+!error.log
+
+# Abaikan folder node_modules/ DEPENDENCIES & PACKAGES
+node_modules/
+
+# Abaikan folder build di mana saja
+build/
+
+# Abaikan folder dist hanya di root
+/dist
+
+# Abaikan file ENVIRONMENT VARIABLES & CONFIGS
+.env
+
+# Abaikan semua file .tmp
+*.tmp
+
+# Build output
+public/css/main.css

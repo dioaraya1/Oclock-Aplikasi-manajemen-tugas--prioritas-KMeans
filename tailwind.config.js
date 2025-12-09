@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // Dark mode configuration
+  darkMode: "class", // atau 'media'
   // Content paths - JANGAN LUPA DIIMPORT!
-  content: ["./public/**/*.{php,js}", "./src/**/*.{php,js}"],
+  content: [
+    "./public/**/*.{php,js}",
+    "./src/**/*.{php,js}",
+    "./src/views/**/*.{php,js}",
+  ],
 
   theme: {
     extend: {
@@ -182,6 +188,7 @@ module.exports = {
           "fade-in": "fadeIn 0.3s ease-in",
           "slide-up": "slideUp 0.4s ease-out",
           "pulse-slow": "pulse 3s infinite",
+          float: "float 6s ease-in-out infinite",
         },
 
         keyframes: {
@@ -192,6 +199,10 @@ module.exports = {
           slideUp: {
             "0%": { transform: "translateY(20px)", opacity: "0" },
             "100%": { transform: "translateY(0)", opacity: "1" },
+          },
+          float: {
+            "0%, 100%": { transform: "translateY(0)" },
+            "50%": { transform: "translateY(-20px)" },
           },
         },
 
@@ -215,9 +226,6 @@ module.exports = {
         },
       },
     },
-
-    // Dark mode configuration
-    darkMode: "class", // atau 'media'
 
     // Plugins
     plugins: [

@@ -7,25 +7,26 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development tailwindcss -i ./src/css/main.css -o ./public/css/main.css --watch",
     "build": "cross-env NODE_ENV=production tailwindcss -i ./src/css/main.css -o ./public/css/main.css --minify",
-    "watch": "npm run dev"
+    "js:build": "esbuild ./src/js/main.js --bundle --outfile=./public/js/main.js --minify",
+    "js:dev": "esbuild ./src/js/main.js --bundle --outfile=./public/js/main.js --watch",
+    "dev:all": "concurrently \"npm run dev\" \"npm run js:dev\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@fontsource-variable/inter": "^5.0.0",
+    "@fontsource-variable/inter": "^5.2.8",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.22",
+    "concurrently": "^8.2.2",
     "cross-env": "^10.1.0",
     "cssnano": "^6.1.2",
+    "esbuild": "^0.19.12",
     "postcss": "^8.5.6",
     "postcss-import": "^15.1.0",
     "tailwindcss": "3.4"
-  },
-  "dependencies": {
-    "@fontsource-variable/inter": "^5.2.8"
   }
 }

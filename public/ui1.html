@@ -2,239 +2,81 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Sistem Pakar Rekomendasi Jurusan</title>
+    <title>Sistem Pakar Rekomendasi Jurusan Kuliah</title>
     <style>
-      /* CSS Dasar untuk Keterbacaan */
       body {
         font-family: Arial, sans-serif;
-        background-color: #f4f7f6;
-        margin: 0;
+        background: #f5f5f5;
         padding: 20px;
-        color: #333;
       }
       .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-      h1 {
-        color: #2c3e50;
-        text-align: center;
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 10px;
-        margin-bottom: 30px;
+        max-width: 500px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
       h2 {
-        color: #3498db;
-        margin-top: 25px;
-        margin-bottom: 15px;
-      }
-      .question-group {
+        text-align: center;
         margin-bottom: 20px;
-        border: 1px solid #bdc3c7;
-        padding: 15px;
-        border-radius: 8px;
       }
       label {
-        display: block;
-        margin-bottom: 8px;
         font-weight: bold;
       }
-      .option {
-        margin-bottom: 5px;
-      }
-      input[type="radio"] {
-        margin-right: 5px;
-      }
-      button {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        background-color: #2ecc71;
-        color: white;
+      .btn {
+        background: #3498db;
+        color: #fff;
+        padding: 10px 15px;
         border: none;
-        border-radius: 8px;
-        font-size: 1.1em;
+        border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s;
-        margin-top: 30px;
+        width: 100%;
+        margin-top: 15px;
       }
-      button:hover {
-        background-color: #27ae60;
-      }
-      .disclaimer {
-        font-size: 0.9em;
-        color: #7f8c8d;
-        margin-top: 20px;
-        text-align: center;
+      .btn:hover {
+        background: #2980b9;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>🎓 Sistem Pakar Rekomendasi Jurusan Kuliah</h1>
+      <h2>Form Input Fakta</h2>
+      <p>Sistem Pakar Rekomendasi Jurusan Kuliah</p>
 
-      <div class="question-group">
-        <p>
-          Selamat datang! Sistem ini akan merekomendasikan jurusan kuliah yang
-          paling sesuai dengan profil minat dan bakat Anda. Jawablah setiap
-          pertanyaan dengan jujur dan sesuai dengan preferensi Anda.
-        </p>
-      </div>
+      <form>
+        <label>1. Apakah Anda suka teknologi?</label><br />
+        <select>
+          <option value="1">YA</option>
+          <option value="0">TIDAK</option></select
+        ><br /><br />
 
-      <form id="recommendationForm">
-        <h2>🔬 Minat Akademik dan Karir</h2>
+        <label>2. Apakah Anda suka pemrograman?</label><br />
+        <select>
+          <option value="1">YA</option>
+          <option value="0">TIDAK</option></select
+        ><br /><br />
 
-        <div class="question-group">
-          <label>1. Bidang ilmu apa yang paling menarik perhatian Anda?</label>
-          <div class="option">
-            <input
-              type="radio"
-              id="minat1_a"
-              name="minat1"
-              value="Sains_Teknologi"
-            />
-            <label for="minat1_a"
-              >A. Sains, Teknologi, dan Pemecahan Masalah Matematis.</label
-            >
-          </div>
-          <div class="option">
-            <input
-              type="radio"
-              id="minat1_b"
-              name="minat1"
-              value="Sosial_Humaniora"
-            />
-            <label for="minat1_b"
-              >B. Hubungan antar manusia, Sejarah, dan Budaya.</label
-            >
-          </div>
-          <div class="option">
-            <input
-              type="radio"
-              id="minat1_c"
-              name="minat1"
-              value="Seni_Desain"
-            />
-            <label for="minat1_c"
-              >C. Ekspresi diri, Desain Visual, dan Kreativitas.</label
-            >
-          </div>
-        </div>
+        <label>3. Apakah Anda memiliki kreativitas tinggi?</label><br />
+        <select>
+          <option value="1">YA</option>
+          <option value="0">TIDAK</option></select
+        ><br /><br />
 
-        <div class="question-group">
-          <label>2. Ketika ada masalah, Anda cenderung fokus pada...</label>
-          <div class="option">
-            <input
-              type="radio"
-              id="minat2_a"
-              name="minat2"
-              value="Logika"
-            />
-            <label for="minat2_a"
-              >A. Analisis data, mencari pola logis, dan membuat
-              algoritma.</label
-            >
-          </div>
-          <div class="option">
-            <input
-              type="radio"
-              id="minat2_b"
-              name="minat2"
-              value="Komunikasi"
-            />
-            <label for="minat2_b"
-              >B. Berdiskusi, negosiasi, dan meyakinkan orang lain.</label
-            >
-          </div>
-        </div>
+        <label>4. Apakah Anda suka seni visual?</label><br />
+        <select>
+          <option value="1">YA</option>
+          <option value="0">TIDAK</option></select
+        ><br /><br />
 
-        <h2>💡 Bakat dan Kemampuan Khusus</h2>
+        <label>5. Apakah Anda memiliki empati tinggi?</label><br />
+        <select>
+          <option value="1">YA</option>
+          <option value="0">TIDAK</option></select
+        ><br /><br />
 
-        <div class="question-group">
-          <label
-            >3. Dalam kegiatan kelompok, peran apa yang sering Anda
-            ambil?</label
-          >
-          <div class="option">
-            <input
-              type="radio"
-              id="bakat1_a"
-              name="bakat1"
-              value="Leadership"
-            />
-            <label for="bakat1_a"
-              >A. Memimpin, mengorganisir, dan mengambil keputusan cepat.</label
-            >
-          </div>
-          <div class="option">
-            <input
-              type="radio"
-              id="bakat1_b"
-              name="bakat1"
-              value="Keterampilan_Manual"
-            />
-            <label for="bakat1_b"
-              >B. Mengerjakan detail, memperbaiki alat, atau merakit
-              sesuatu.</label
-            >
-          </div>
-          <div class="option">
-            <input
-              type="radio"
-              id="bakat1_c"
-              name="bakat1"
-              value="Penelitian"
-            />
-            <label for="bakat1_c"
-              >C. Mencari informasi mendalam, membaca, dan merangkum.</label
-            >
-          </div>
-        </div>
-
-        <div class="question-group">
-          <label
-            >4. Kemampuan apa yang paling sering dipuji oleh teman/guru
-            Anda?</label
-          >
-          <div class="option">
-            <input
-              type="radio"
-              id="bakat2_a"
-              name="bakat2"
-              value="Hitungan"
-            />
-            <label for="bakat2_a"
-              >A. Kecepatan menghitung atau memahami rumus Fisika/Kimia.</label
-            >
-          </div>
-          <div class="option">
-            <input
-              type="radio"
-              id="bakat2_b"
-              name="bakat2"
-              value="Bahasa"
-            />
-            <label for="bakat2_b"
-              >B. Menguasai bahasa asing atau menulis esai yang kuat.</label
-            >
-          </div>
-        </div>
-
-        <button type="submit">Lihat Rekomendasi Jurusan Saya</button>
+        <button class="btn">Proses Rekomendasi</button>
       </form>
-
-      <div class="disclaimer">
-        *Disclaimer: Hasil rekomendasi ini bersifat panduan dan bukan keputusan
-        final. Keputusan akhir tetap ada di tangan Anda.
-      </div>
     </div>
   </body>
 </html>

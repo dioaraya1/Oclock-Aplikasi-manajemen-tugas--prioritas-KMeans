@@ -23,3 +23,4 @@ build/
 
 # Build output
 public/css/main.css
+public/js/main.js
